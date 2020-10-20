@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Pertemuan 4</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Tugas Praktikum PBW Pertemuan 4">
+	<meta name="keyword" content="Tugas Praktikum 4">
+	<style type="text/css">
+		fieldset {
+		    border: 4px solid #808080;
+		    display: inline-block;
+		    font-family: arial;
+		    padding: 1em 2em;
+
+		}
+ 
+		legend {
+			font-size: 18px;
+			font-family: arial;
+			font-weight: 700; 
+		    background: #808000;
+		    color: #FFFFFF;
+		    margin-bottom: 10px;
+		    padding: 0.5em 1em;
+		}
+
+	</style>
+</head>
+<body>
+	<form action="home.php" method="POST">
+		<fieldset>
+			<legend> BIODATA DIRI </legend>
+			<label for="Nama"> Nama :</label> <br>
+			<input type="text" id="Nama" name="Nama"> <br>
+
+			<label for="TTL"> Tempat Lahir : </label> <br>
+			<input type="text" id="TTL" name="TTL"> <br>
+
+			<label for="TGL"> Tanggal Lahir : </label> <br>
+			<input type="date" id="TGL" name="TGL"> <br><br>
+
+			<label> Jenis Kelamin : </label> <br>
+			<input type="radio" id="Laki-laki" name="JK" value="Laki-laki">
+			<label for="Laki-laki"> Laki-laki </label> <br>
+			<input type="radio" id="Perempuan" name="JK" value="Perempuan"> 
+			<label for="Perempuan"> Perempuan</label> <br>
+			<input type="radio" id="Lainnya" name="JK" value="Lainnya">
+			<label for="Lainnya"> Lainnya</label> <br><br>
+
+			<label for="PT"> Pendidikan Terakhir : </label><br>
+			<select id="PT" name="PT">
+				<option value="SD"> SD </option>
+				<option value="SMP"> SMP </option>
+				<option value="SMA"> SMA </option>
+				<option value="D1"> D1 </option>
+				<option value="D2"> D2 </option>
+				<option value="D3"> D3 </option>
+				<option value="D4"> D4 </option>
+				<option value="S1"> S1 </option>
+				<option value="S2"> S2 </option>
+				<option value="S3"> S3 </option>
+			</select> <br>
+
+			<label for="PS"> Pendidikan Saat Ini: </label><br>
+			<select id="Ps" name="PS">
+				<option value="SD"> SD </option>
+				<option value="SMP"> SMP </option>
+				<option value="SMA"> SMA </option>
+				<option value="D1"> D1 </option>
+				<option value="D2"> D2 </option>
+				<option value="D3"> D3 </option>
+				<option value="D4"> D4 </option>
+				<option value="S1"> S1 </option>
+				<option value="S2"> S2 </option>
+				<option value="S3"> S3 </option>
+			</select> <br>
+
+			<label for="HP"> Nomor Telpon / HP: </label><br>
+			<input type="number" id="HP" name="HP"><br>
+
+			<label for="Alamat"> Alamat :</label> <br>
+			<textarea id="Alamat" name="Alamat"> </textarea> <br>
+
+			<input type="submit" name="submit">
+		</fieldset>
+	</form>
+</body>
+</html>
