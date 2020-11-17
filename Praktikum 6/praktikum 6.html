@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- link CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title> Pertemuan 6 </title>
+  </head>
+  <body>
+    
+   
+	
+
+    <div class="container">
+    	<div>
+    		<form>
+	    		<h6 class="judul"><b> ~ RANISA KALKULATOR ~ </b></h6><br>
+	    		<input  type="text" name="show" id="show" readonly="show" class="tampilan">
+    	 
+	    		<div class="row mt-3">
+	    			<!-- Start Tabel Kiri -->
+	    			<div class="col ml-3 my-auto">
+	    				<div >
+	    					<table>
+	    						<tr>
+	    							<td> <input type="button" class="btn btn-info" value="7" name="7" onclick="display(7)"> </td>
+	    							<td> <input type="button" class="btn btn-info" value="8" name="8" onclick="display(8)"> </td>
+	    							<td> <input type="button" class="btn btn-info" value="9" name="9" onclick="display(9)"> </td>
+	    						</tr>
+	    						<tr> 
+	    							<td> <input type="button" class="btn btn-info" value="4" name="4" onclick="display(4)"> </td>
+	    							<td> <input type="button" class="btn btn-info" value="5" name="5" onclick="display(5)"> </td>
+	    							<td> <input type="button" class="btn btn-info" value="6" name="6" onclick="display(6)"> </td>
+	    						</tr>
+	    						<tr> 
+	    							<td> <input type="button" class="btn btn-info" value="1" name="1" onclick="display(1)"> </td>
+	    							<td> <input type="button" class="btn btn-info" value="2" name="2" onclick="display(2)"> </td>
+	    							<td> <input type="button" class="btn btn-info" value="3" name="3" onclick="display(3)"> </td>
+	    						</tr>
+	    						<tr> 
+	    							<td> <input type="button" class="btn btn-info" value="0" name="0" onclick="display('0')"> </td>
+	    							<td> <input type="button" class="btn btn-info" value="00" name="00" onclick="display('00')"> </td>
+	    							<td> <input type="button" class="btn btn-info" value="." name="." onclick="display('.')"> </td>
+	    						</tr>
+	    					</table>
+	    				</div>
+	    			</div>
+
+	    			<div class="col my-auto">
+	    					<table>
+	    						<tr>
+	    							<td> <input type="button" class="btn btn-success" value="Delete" name="8" onclick="del()"> </td>
+	    							<td> <input type="button" class="btn btn-danger" value="C" name="9" onclick="clean()"> </td>
+	    						</tr>
+	    					</table>
+	    					<table>
+	    						<tr> 
+	    							<td> <input type="button" class="btn btn-info" value="+" name="+" onclick="display('+')"> </td>
+	    							<td> <input type="button" class="btn btn-info" value="x" name="x" onclick="display('*')"> </td>
+	    							<td> <input type="button" class="btn btn-info" value="mod" name="mod" onclick="display('%')"> </td>
+	    						</tr>
+	    						<tr> 
+	    							<td> <input type="button" class="btn btn-info" value="-" name="-" onclick="display('-')"> </td>
+	    							<td> <input type="button" class="btn btn-info" value=":" name=":" onclick="display('/')"> </td>
+	    							<td> <input type="button" class="btn btn-info" value="^" name="^" onclick="display('**')"> </td>
+	    						</tr>
+	    					</table>
+	    					<table>
+	    						<tr> 
+	    							<td> <input type="button" class="btn btn-secondary" value="=" name="=" onclick="equal()"> </td>
+	    						</tr>
+	    					</table>
+	    			</div>
+	    			
+	    		</div>
+    		
+    		</form>
+    	</div>
+    </div>
+
+    <!-- JS -->
+    <script>
+        function display(input) {
+            document.getElementById("show").value += input;
+        }
+
+        function clean() {
+            document.getElementById("show").value = "";
+        }
+
+        function del() {
+            var input = document.getElementById("show").value;
+            document.getElementById("show").value = input.substring(0, input.length - 1);
+        }
+
+        function equal() {
+            var input = document.getElementById("show").value;
+            if (input) {
+                document.getElementById("show").value = eval(input);
+            }
+        }
+    </script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

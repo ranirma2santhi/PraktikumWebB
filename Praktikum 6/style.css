@@ -1,0 +1,46 @@
+body{
+	background-color: #E1EEDA;
+}
+
+.container{
+	width: 35%;
+	margin-top: 5%;
+	border: 6px solid #026E69;
+	padding: 3%;
+	font-family: arial;
+	border-radius: 8px;
+	background-color: #EBFFFB;
+	
+}
+
+.judul{
+	text-align: center;
+	font-family: arial;
+}
+
+.tampilan{
+	width: 21em;
+	height: 3em;
+	border: 3px solid #0F6C7B;
+	margin-left: 1em;
+	border-radius: 8px;
+	justify-content: center;
+	background-color: #18A6BE;
+	color: white;
+	text-align: center;
+}
+
+.btn{
+	width: 3em;
+    height: 3em;
+}
+
+.btn-success{
+	width: 6.1em;
+    height: 3em;
+}
+
+.btn-secondary{
+	width: 9.3em;
+    height: 3em;
+}
